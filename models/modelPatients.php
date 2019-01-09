@@ -12,8 +12,7 @@ class Patients extends database {
 
 
 
-    public function addAllpatients() { //fontion qui va afficher les clients
-        // On récupère tout le contenu de la table clients
+    public function addAllpatients() { //fontion qui va inclure les nouveaux patients
         $queryResult = $this->database->prepare('INSERT INTO patients VALUES (NULL, :lastname, :firstname, :birthdate, :phone, :mail)'); 
         $addAllPatientsData = $queryResult->execute(array(
         'lastname' => $_POST['lastname'],
@@ -23,6 +22,14 @@ class Patients extends database {
         'mail' => $_POST['mail']
     ));
        return 'Merci';
+    }
+
+
+    public function listAllpatients() { //fontion qui va afficher les patients
+        // On récupère tout le contenu de la table clients
+        $queryResult = $this->database->query('SELECT * FROM patients'); 
+        $allPatientsData = $queryResult->fetchAll(PDO::FETCH_OBJ);
+        return $allPatientsData;
     }
 
 }
