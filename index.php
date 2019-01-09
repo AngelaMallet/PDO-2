@@ -1,4 +1,5 @@
 <?php
+require_once 'controlers/indexController.php';
 require_once 'controlers/controllerIndex-1.php';
 ?>
 <!DOCTYPE html>

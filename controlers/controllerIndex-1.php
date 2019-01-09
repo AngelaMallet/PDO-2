@@ -1,5 +1,8 @@
 <?php
-require 'models/modelDatabase.php';
-require 'models/modelPatients.php';
+require_once 'models/modelDatabase.php';
+require_once 'models/modelPatients.php';
 $patientsObj = new Patients();
-$clientsPatients = $patientsObj->addAllpatients();
+
+if ((empty($formError)) && ($_POST['send'])) {
+    $patientsObj->addAllpatients();
+}

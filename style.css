@@ -39,7 +39,13 @@ input.tel {
     font-weight: bold;
     cursor: pointer;
 }
-
+.buttonPatient {
+    border: none;
+    background: lightpink;
+    font-size: 2em;
+    cursor: pointer;
+    color: #fff;
+}
 .message {
     margin-bottom: 15px;
 }

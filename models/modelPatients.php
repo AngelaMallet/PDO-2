@@ -8,9 +8,6 @@ class Patients extends database {
     public $birthdate;
     public $phone;
     public $mail;
-    
-
-
 
     public function addAllpatients() { //fontion qui va inclure les nouveaux patients
         $queryResult = $this->database->prepare('INSERT INTO patients VALUES (NULL, :lastname, :firstname, :birthdate, :phone, :mail)'); 
@@ -21,7 +18,6 @@ class Patients extends database {
         'phone' => $_POST['phone'],
         'mail' => $_POST['mail']
     ));
-       return 'Merci';
     }
 
 
@@ -32,4 +28,10 @@ class Patients extends database {
         return $allPatientsData;
     }
 
+    public function Idpatients() { //fontion qui va afficher l'Id du patient
+        // pour après récupérer ses informations
+        $queryResult = $this->database->query('SELECT id FROM patients'); 
+        $IdPatientsData = $queryResult->fetchAll(PDO::FETCH_OBJ);
+        return $IdPatientsData;
+    }
 }
