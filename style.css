@@ -1,107 +1,23 @@
 body {
-    background: #fff;
-    max-width: 500px;
-    margin: 10% auto;
+    background: #fff1e0;
+   
     font-family: 'Montserrat';
 }
 
-.form-field {
-    margin-bottom: 15px;
-}
-input.text {
-    font-family: 'Montserrat';  
-    font-size: 0.8em;
+.material-icons {
+  font-size: 2em;
+  margin-left: 1em;
 }
 
-input.date {
-    font-family: 'Montserrat';  
-    font-size: 0.8em;
-    letter-spacing: 3px;
+a {
+  background-color: #ee6e73;
 }
 
-input.tel {
-    font-family: 'Montserrat';  
-    font-size: 0.8em;
-    letter-spacing: 3px;
+.formTitle {
+    font-size: 1.5em;
 }
 
-.text, .button {
-    box-sizing: border-box;
-    width: 100%;
-    font-size: 16px;
-    padding: 10px 15px;
-}
-
-.button {
-    border: none;
-    background: coral;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-}
-.buttonPatient {
-    border: none;
-    background: lightpink;
-    font-size: 2em;
-    cursor: pointer;
-    color: #fff;
-}
-.message {
-    margin-bottom: 15px;
-}
-
-.message p {
-    margin: 0;
-    padding: 15px;
-}
-
-.message .success {
-    background: #d4edda;
-    border: 1px solid #c3e6cb;
-}
-
-.message .error {
-    background: #f8d7da;
-    border: 1px solid #f5c6cb;
-}
-
-.section-title {
-    font-size: 16px;
-}
-
-.select {
-    padding: 7px;
-}
-
-.textarea {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-}
-
-.table {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 1rem;
-    border-collapse: collapse;
-    margin: 10px;
-    text-align: left;
-}
-
-.table tr {
-    display: table-row;
-}
-
-.table td, .table th {
-    padding: .75rem;
-    vertical-align: top;
-    border-top: 1px solid #e9ecef;
-    border-color: #eee;
-}
-
-.table thead th, .table tfoot th {
-    vertical-align: bottom;
-    border-bottom: 1px solid #e9ecef;
-    border-color: #eee;
+[action] p {
+  color: coral;
+  text-align: left;
 }

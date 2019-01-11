@@ -5,6 +5,7 @@ require_once 'models/modelPatients.php';
 $patientsObj = new Patients();
 
 
+
 // Déclaration des regeX
 $regexText = '/^[A-zÂ-ÿ -]+$/';
 $regexEmail = '/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/';
@@ -89,5 +90,9 @@ if (count($formError) == 0 && isset($_POST['send'])) {
     $date = explode("/", $date);
     $patientsObj->birthdate = $date[2].'-'.$date[1].'-'.$date[0];
     $patientsObj->addAllpatients();
+    /* Redirection vers une page différente du même dossier */
+$extra = 'welcome.php';
+header("Location: http://localhost:8888/PDO-P2/$extra");
+exit;
 }
 //on vérifie que nous avons crée une entrée submit dans l'array $_POST, si présent on éxécute la méthode addPatient()

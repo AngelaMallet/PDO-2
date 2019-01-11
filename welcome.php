@@ -1,6 +1,3 @@
-<?php
-require_once 'controlers/controllerIndex.php';
-?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -15,19 +12,18 @@ require_once 'controlers/controllerIndex.php';
         <link rel="stylesheet" href="style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
         <meta charset="utf-8" />
-        <title>Hospital</title>
+        <title>Inscription nouveau patient</title>
     </head>
-    <body>
-        
-        <!--Fin du header et navbar -->
+     <!--Fin du header et navbar -->
         <?php include 'nav.html';?>
         <div class="container content">
             <div class="row row-content">
                 <div class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3">
-                    <h1>HospitalE2N</h1>
+                    <p>Bonjour et bienvenue chez HospitalE2N</p>
                 </div>
                 <div class="container wrapper-align center-align left-part">
-                    <img class="responsive-img hide-on-small-only" src="medical.jpg" alt="image jouets mdical" />
+                    <img class="responsive-img hide-on-small-only" src="welcome.jpg" alt="image jouet ambulance" />
+                     <a href="index.php" class="waves-effect waves-light red accent-1 btn-large">Retour</a>
                 </div>
             </div>    
         </div>
@@ -36,6 +32,4 @@ require_once 'controlers/controllerIndex.php';
         <!-- fin du footer -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="js.js"></script>
-            
-    </body>
 </html>

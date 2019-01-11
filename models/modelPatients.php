@@ -32,9 +32,7 @@ class Patients extends database {
         'phone' => $this->phone,
         'mail' => $this->mail
     ));
-    
-        //on utilise la méthode execute() via un return
-        return $addAllPatients->execute();
+    return 'Merci';
     }
 
 
