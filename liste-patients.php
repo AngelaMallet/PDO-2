@@ -9,7 +9,7 @@ require_once 'controlers/controllerIndex-2.php';
         <!-- Favicons-->
         <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-            
+        
         <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="style.css" />
@@ -30,7 +30,7 @@ require_once 'controlers/controllerIndex-2.php';
                     <?php
                     // On affiche chaque entrée une à une
                     foreach ($listPatientsArray as $patientsList) { ?>
-                   
+                        
                         <li>Prénom : <?= $patientsList->firstname ?></li>
                         <li>Nom : <?= $patientsList->lastname ?></li>
                         <hr>
@@ -38,11 +38,14 @@ require_once 'controlers/controllerIndex-2.php';
                     }
                     ?>
                     </ul>
-                        
+                    
                 </div>
             </div>
         </div>
+        <?php include 'home.html'; ?> 
         <!-- fin du footer -->
-            
+        
     </body>
 </html>
+
+

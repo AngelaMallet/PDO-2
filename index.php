@@ -9,7 +9,7 @@ require_once 'controlers/controllerIndex.php';
         <!-- Favicons-->
         <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            
+        
         <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="style.css" />
@@ -30,12 +30,18 @@ require_once 'controlers/controllerIndex.php';
                     <img class="responsive-img hide-on-small-only" src="medical.jpg" alt="image jouets mdical" />
                 </div>
             </div>    
+            <div class="row">
+                <div class="col s12 m6 l3"><a href="ajout-patient.php" class="waves-effect waves-light btn-large white-text blue-grey lighten-3">Inscription</a></div>
+                <div class="col s12 m6 l3"><a class="waves-effect waves-light btn-large white-text blue-grey lighten-3">Profil</a></div>
+                <div class="col s12 m6 l3"><a class="waves-effect waves-light btn-large white-text blue-grey lighten-3">RDV</a></div>
+                <div class="col s12 m6 l3"><a href="liste-patients.php" class="waves-effect waves-light btn-large white-text blue-grey lighten-3">Patients</a></div>
+            </div>
         </div>
-            
-            
+        
         <!-- fin du footer -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="js.js"></script>
-            
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+        <script type="text/javascript" src="materialize.min.js"></script>
+        <script type="text/javascript" src="js.js"></script>
+        
     </body>
 </html>
