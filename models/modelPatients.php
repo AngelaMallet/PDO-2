@@ -1,8 +1,10 @@
 <?php
-// on crée une classe Patients dont le parent est database donc patients hérite de tous les attributs
-// La class patients va permettre d'accéder à la table patients de la database hospitalE2N
+/**
+ * on crée une classe Patients dont le parent est database donc patients hérite de tous les attributs
+ * La class patients va permettre d'accéder à la table patients de la database hospitalE2N
+ */
 class Patients extends database {
-      
+      // Attributs en public
     public $id;       
     public $lastname;
     public $firstname;
@@ -15,26 +17,34 @@ class Patients extends database {
         parent::__construct();
     }
 
-    //on
-    //@return type EXECUTE
-    public function addAllpatients() { //addAllpatients est une méthode avec la requête 
+    /**
+     * Fonction qui ajoute un patient
+     * @return type EXECUTE
+     */
+    public function addPatient() { //addAllpatients est une méthode avec la requête 
     //qui va inclure les nouveaux patients dans la table patients.
     
     //Insertion des données du patient à l'aide de la requête préparée avec INSERT INTO et le nom des champs de la table
     //Insertion des valeurs des variables via les marqueurs nominatifs exemple :nomdumarqueur en gros c'est comme un alias
- 
+ // :marqueurs nominatifs 
         $queryResult = $this->database->prepare('INSERT INTO patients(lastname, firstname, birthdate, phone, mail) VALUES (:lastname, :firstname, :birthdate, :phone, :mail)'); 
-        
-        $addAllPatientsData = $queryResult->execute(array(
-        'lastname' => $this->lastname,
-        'firstname' => $this->firstname,
-        'birthdate' => $this->birthdate,
-        'phone' => $this->phone,
-        'mail' => $this->mail
-                
-    ));
-    return 'Merci';
+        $queryResult->bindValue(':lastname', $this->lastname, PDO::PARAM_STR);
+        $queryResult->bindValue(':firstname', $this->firstname, PDO::PARAM_STR);
+        $queryResult->bindValue(':birthdate', $this->birthdate, PDO::PARAM_STR);
+        $queryResult->bindValue(':phone', $this->phone, PDO::PARAM_STR);
+        $queryResult->bindValue(':mail', $this->mail, PDO::PARAM_STR);
+            
+        return $queryResult->execute(); //@return exécute la requ^e pour ajouter un pacient
     }
+        
+//        $addAllPatientsData = $queryResult->execute(array(
+//        'lastname' => $this->lastname,
+//        'firstname' => $this->firstname,
+//        'birthdate' => $this->birthdate,
+//        'phone' => $this->phone,
+//        'mail' => $this->mail
+
+   
 
 
     public function listAllpatients() { //fontion qui va afficher les patients

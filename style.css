@@ -82,8 +82,9 @@ button {
 }
 
 .clientsImg {
-    margin-top: 50px;
+    margin-top: 130px;
     border-radius: 20%;
+    blend-mode: multiply;
 }
 
 .oval {

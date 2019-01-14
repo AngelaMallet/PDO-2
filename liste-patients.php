@@ -42,7 +42,7 @@ require_once 'controlers/controllerIndex-2.php';
                             <tr>
                                 <td><?= $patientsList->lastname ?></td>
                                 <td><?= $patientsList->firstname ?></td>
-                                <td><button><a href="profil-patient.php?id=<?= $patientsList->id ?>" class="waves-effect waves-light btn-large white-text blue-grey">Détails</a></button></td>
+                                <td><button><a href="profil-patient.php?id=<?= $patientsList->id ?>" class="waves-effect waves-light btn-small white-text blue-grey">Détails</a></button></td>
                             </tr>   
                         </tbody>
                              <?php
@@ -52,7 +52,7 @@ require_once 'controlers/controllerIndex-2.php';
                 </div>
                  <div class="hide-on-small-only">
                     <div class="col s12 m6 l6 center-align">
-                        <img class="clientsImg" width="800" height="700" src="clients.jpg" alt="photo de petitd canard en plastique">
+                        <img class="clientsImg" width="650" height="700" src="thai.png" alt="photo de petitd canard en plastique">
                     </div>
                 </div>
             </div>

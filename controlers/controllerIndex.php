@@ -16,7 +16,10 @@ $regexbirthDate = '/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19([0-9]{2})|20
 //Tout ce  qui est hors crochets et hors parenthèses est obligatoire.
 
 
-
+//Initialise $addSuccess en False pour afficher message
+$addSuccess = false;
+//Initialise $hideSuccess en true pour afficher inputform
+$hideSuccess = true;
 
 
 // Déclaration d'un tableau d'erreurs
@@ -89,7 +92,8 @@ if (isset($_POST['birthdate'])) {
 if (count($formError) == 0 && isset($_POST['send'])) {
     $date = explode("/", $date);
     $patientsObj->birthdate = $date[2].'-'.$date[1].'-'.$date[0];
-    $patientsObj->addAllpatients();
+    $patientsObj->addPatient(); 
+    $addSuccess = true;
     /* Redirection vers une page différente du même dossier */
 $extra = 'welcome.php';
 header("Location: http://localhost:8888/PDO-P2/$extra");

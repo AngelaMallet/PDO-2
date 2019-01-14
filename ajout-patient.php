@@ -19,6 +19,9 @@ require_once 'controlers/controllerIndex.php';
     </head>
     <body>
          <?php include 'nav.html';?>
+        <?php if ($addSuccess) { ?>
+                                <h2><?= 'Patient enregistré !' ?></h2>
+                            <?php } ?>
         <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Formulaire d'inscription</h1>
         <div class="container center-align">
             <div class="row">

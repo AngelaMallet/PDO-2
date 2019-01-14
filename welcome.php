@@ -20,6 +20,7 @@
             <div class="row row-content">
                 <div class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3">
                     <p>Bonjour et bienvenue chez HospitalE2N</p>
+                    <h1>Vous êtes bien enregistré</h1>
                 </div>
                 <div class="container wrapper-align center-align left-part">
                     <img class="responsive-img hide-on-small-only" src="welcome.jpg" alt="image jouet ambulance" />
