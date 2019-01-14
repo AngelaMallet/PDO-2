@@ -22,23 +22,38 @@ require_once 'controlers/controllerIndex-2.php';
         <!--Fin du header et navbar -->
         <div class="container">
             <div class="row">
-                <div class="col s12 m12 l12">
+                <div class="col s12 m12 l12 center-align blue-grey-text text-blue-grey darken-3">
                     <h1>Liste des patients :</h1>
                 </div>
                 <div class="col s12 m6 l6">
-                    <ul>                    
+                    <table>
+                        <thead class="highlight blue-grey-text text-blue-grey darken-3">
+                            <tr>
+                                <th>NOM</th>
+                                <th>PRÉNOM</th>
+                                <th></th>
+                            </tr>
+                        </thead>                  
                     <?php
                     // On affiche chaque entrée une à une
                     foreach ($listPatientsArray as $patientsList) { ?>
                         
-                        <li>Prénom : <?= $patientsList->firstname ?></li>
-                        <li>Nom : <?= $patientsList->lastname ?></li>
-                        <hr>
-                    <?php
+                        <tbody class="highlight blue-grey-text text-blue-grey darken-3">
+                            <tr>
+                                <td><?= $patientsList->lastname ?></td>
+                                <td><?= $patientsList->firstname ?></td>
+                                <td><button><a href="profil-patient.php?id=<?= $patientsList->id ?>" class="waves-effect waves-light btn-large white-text blue-grey">Détails</a></button></td>
+                            </tr>   
+                        </tbody>
+                             <?php
                     }
                     ?>
-                    </ul>
-                    
+                    </table>
+                </div>
+                 <div class="hide-on-small-only">
+                    <div class="col s12 m6 l6 center-align">
+                        <img class="clientsImg" width="800" height="700" src="clients.jpg" alt="photo de petitd canard en plastique">
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,5 +62,4 @@ require_once 'controlers/controllerIndex-2.php';
         
     </body>
 </html>
-
 

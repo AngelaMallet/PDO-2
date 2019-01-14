@@ -19,7 +19,7 @@ require_once 'controlers/controllerIndex.php';
     </head>
     <body>
          <?php include 'nav.html';?>
-        <h1 class="formTitle center-align red-text text-red accent-1">Formulaire d'inscription</h1>
+        <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Formulaire d'inscription</h1>
         <div class="container center-align">
             <div class="row">
                 <form method="POST" class="col s12 l12" action="ajout-patient.php">

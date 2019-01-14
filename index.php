@@ -11,6 +11,7 @@ require_once 'controlers/controllerIndex.php';
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
         <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+        <link async href="http://fonts.googleapis.com/css?family=Warnes" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
@@ -31,10 +32,10 @@ require_once 'controlers/controllerIndex.php';
                 </div>
             </div>    
             <div class="row">
-                <div class="col s12 m6 l3"><a href="ajout-patient.php" class="waves-effect waves-light btn-large white-text blue-grey lighten-3">Inscription</a></div>
-                <div class="col s12 m6 l3"><a class="waves-effect waves-light btn-large white-text blue-grey lighten-3">Profil</a></div>
-                <div class="col s12 m6 l3"><a class="waves-effect waves-light btn-large white-text blue-grey lighten-3">RDV</a></div>
-                <div class="col s12 m6 l3"><a href="liste-patients.php" class="waves-effect waves-light btn-large white-text blue-grey lighten-3">Patients</a></div>
+                <div class="col s12 m12 l3"><a href="ajout-patient.php" class="waves-effect waves-light btn-large white-text blue-grey lighten-3">Inscription</a></div>
+                <div class="col s12 m12 l3"><a class="waves-effect waves-light btn-large white-text blue-grey lighten-3">Profil</a></div>
+                <div class="col s12 m12 l3"><a class="waves-effect waves-light btn-large white-text blue-grey lighten-3">RDV</a></div>
+                <div class="col s12 m12 l3"><a href="liste-patients.php" class="waves-effect waves-light btn-large white-text blue-grey lighten-3">Patients</a></div>
             </div>
         </div>
         
