@@ -1,10 +1,6 @@
 <?php
 require_once 'controlers/controllerModifPatient.php';
 ?>
- <pre><?php
-    print_r($profilPatient);
-?></pre>
-
 <!DOCTYPE html>
 <html lang="fr">
     <head>

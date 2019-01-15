@@ -15,7 +15,7 @@ require_once 'controlers/controllerIndex-3.php';
         <link rel="stylesheet" href="style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
         <meta charset="utf-8" />
-        <title>Profil du patient</title>
+        <title>Espace patient</title>
     </head>
     <body>
          <?php include 'nav.html';?>

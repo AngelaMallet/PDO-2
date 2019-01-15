@@ -52,7 +52,7 @@ require_once 'controlers/controllerIndex-2.php';
                 </div>
                  <div class="hide-on-small-only">
                     <div class="col s12 m6 l6 center-align">
-                        <img class="clientsImg" width="650" height="700" src="thai.png" alt="photo de petitd canard en plastique">
+                        <img class="clientsImg" width="650" height="700" src="thai.png" alt="Illustration médical">
                     </div>
                 </div>
             </div>

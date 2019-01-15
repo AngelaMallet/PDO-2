@@ -96,5 +96,9 @@ if (count($formError) == 0 && isset($_POST['send'])) {
     $patientModif->birthdate = $date[2].'-'.$date[1].'-'.$date[0];
     $patientModif->modifPatient(); 
     $addSuccess = TRUE;
+     /* Redirection vers une page différente du même dossier */
+$extra2 = "profil-patient.php";
+header("Location: http://localhost:8888/PDO-P2/$extra2?id=$profilPatient->id");
+exit;
 }
 //on vérifie que nous avons crée une entrée submit dans l'array $_POST, si présent on éxécute la méthode addPatient()
