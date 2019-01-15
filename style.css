@@ -100,7 +100,7 @@ button {
   color: rgba(0,0,0,1);
   -o-text-overflow: clip;
   text-overflow: clip;
-  background: url("http://enjoycss.com/bg-img/custom/107898-tv6vky.8jpc.jpg"), #1abc9c;
+  
   background-position: 39% 50%, 50% 50%;
   -webkit-background-origin: padding-box;
   background-origin: padding-box;
@@ -108,12 +108,10 @@ button {
   background-clip: border-box;
   -webkit-background-size: auto 108%, auto auto;
   background-size: auto 108%, auto auto;
-  -webkit-box-shadow: 5px 5px 8px 2px rgba(239,158,158,0.4) ;
-  box-shadow: 5px 5px 8px 2px rgba(239,158,158,0.4) ;
   position: absolute;
   left: 10px;
   top: 5px;
   z-index: 1;
-  mix-blend-mode: luminosity;
+ 
   opacity: 0.8;
 }

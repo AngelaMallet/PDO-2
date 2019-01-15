@@ -45,7 +45,10 @@ class Patients extends database {
 //        'mail' => $this->mail
 
    
-
+/**
+ * 
+ * @return Méthode qui affiche les patients
+ */
 
     public function listAllpatients() { //fontion qui va afficher les patients
         // On récupère tout le contenu de la table clients
@@ -70,10 +73,26 @@ class Patients extends database {
         //faire un fetchALL en utilisant l'objet PDO.
     }
    
-   
     
-    public function __destruct() {
+    
+    public function modifPatient() { //addAllpatients est une méthode avec la requête 
+    //qui va inclure les nouveaux patients dans la table patients.
+    
+    //Modifications des données du patient à l'aide de la requête préparée avec INSERT INTO et le nom des champs de la table
+    //Insertion des valeurs des variables via les marqueurs nominatifs exemple :nomdumarqueur en gros c'est comme un alias
+ // :marqueurs nominatifs 
+        $queryResult = $this->database->prepare('UPDATE patients SET lastname=:lastname, firstname=:firstname, birthdate=:birthdate, phone=:phone, mail=:mail WHERE id = :id');
+        $queryResult->bindValue(':lastname', $this->lastname, PDO::PARAM_STR);
+        $queryResult->bindValue(':firstname', $this->firstname, PDO::PARAM_STR);
+        $queryResult->bindValue(':birthdate', $this->birthdate, PDO::PARAM_STR);
+        $queryResult->bindValue(':phone', $this->phone, PDO::PARAM_STR);
+        $queryResult->bindValue(':mail', $this->mail, PDO::PARAM_STR);
+        $queryResult->bindValue(':id', $this->id, PDO::PARAM_INT);
+            
+        return $queryResult->execute(); //@return exécute la requ^e pour ajouter un pacient
+    }
+    
+      public function __destruct() {
         parent::__destruct();
     }
 }
-    
