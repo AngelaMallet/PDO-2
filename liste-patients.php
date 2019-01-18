@@ -1,5 +1,5 @@
 <?php
-require_once 'controlers/controllerIndex-2.php';
+require_once 'controlers/controllerListAllpatients.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">

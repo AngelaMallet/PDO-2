@@ -1,3 +1,6 @@
+<?php
+require_once 'controlers/controllerListAllPatients.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -25,6 +28,7 @@
                 <div class="container wrapper-align center-align left-part">
                     <img class="responsive-img hide-on-small-only" src="welcome.jpg" alt="image jouet ambulance" />
                      <a href="index.php" class="waves-effect waves-light red accent-1 btn-large">Retour</a>
+                    <a href="profil-patient.php?id=<?= $_GET['id'] ?>" class="waves-effect waves-light red accent-1 btn-large">Votre espace</a>
                 </div>
             </div>    
         </div>

@@ -59,7 +59,7 @@ class Patients extends database {
    
    public function Idpatients() {
         //je fais ma requête dans une variable $query
-        $query = 'SELECT * FROM patients WHERE id=:id';
+        $query = 'SELECT `id`, `lastname`, `firstname`,DATE_FORMAT(`birthdate`, "%d/%m/%Y") AS birthdate, `phone`, `mail` FROM patients WHERE id=:id';
         //le résultat de ma requête je le stocke dans $showProfileList
         //$this = correspond aux attributs de ma classe ex patients, à l'élément de ma classe (table patients) 
         $resultProfilePatient = $this->database->prepare($query);

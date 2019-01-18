@@ -1,5 +1,5 @@
 <?php
-require_once 'controlers/controllerIndex.php';
+require_once 'controlers/controllerAjoutPatient.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">

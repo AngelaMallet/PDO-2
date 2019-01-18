@@ -20,6 +20,14 @@ a {
   background-color: #ee6e73;
 }
 
+.phoneTypo {
+    letter-spacing: 2px;
+}
+
+td {
+    min-width: 100px;
+}
+
 .formTitle {
     font-size: 1.5em;
 }

@@ -1,5 +1,5 @@
 <?php
-require_once 'controlers/controllerIndex-3.php';
+require_once 'controlers/controllerIdpatients.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -43,7 +43,7 @@ require_once 'controlers/controllerIndex-3.php';
                                 <td><?= $IdPatientsArray->firstname ?></td>
                                 <td><?= $IdPatientsArray->mail ?></td>
                                 <td><?= $IdPatientsArray->birthdate ?></td>
-                                <td><?= $IdPatientsArray->phone ?></td>
+                                <td class="phoneTypo"><?= $IdPatientsArray->phone ?></td>
                                 <td><button><a href="modif-patient.php?id=<?= $IdPatientsArray->id ?>" class="waves-effect waves-light btn-small white-text blue-grey">Modifier</a></button></td>
                             </tr>   
                         </tbody>
