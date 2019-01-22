@@ -27,12 +27,17 @@ if (isset($_POST['dateHour'])) {
     }
 }
     if (count($formErrordateHour) == 0 && isset($_POST['sendAppointments'])) {
-        echo $rdvObj->idPatients;  
-        echo $rdvObj->dateHour;
-    $rdvObj->addAppointments(); 
-     /* Redirection vers une page différente du même dossier */
-$extra = 'liste-patients.php';
-header("Location: http://localhost:8888/PDO-P2/$extra");
-exit;
+        $count = $rdvObj->checkFree();
+        if($count > 0){
+            echo 'Le rendez-vous est déjà pris';
+        } else {
+            echo 'Gagné';
+             $rdvObj->addAppointments(); 
+              /* Redirection vers une page différente du même dossier 
+            $extra = 'liste-rendez-vous.php';
+            header("Location: http://localhost:8888/PDO-P2/$extra");
+            exit;*/
+        }
+  
 }
     

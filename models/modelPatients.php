@@ -52,7 +52,7 @@ class Patients extends database {
 
     public function listAllpatients() { //fontion qui va afficher les patients
         // On récupère tout le contenu de la table clients
-        $queryResult = $this->database->query('SELECT * FROM patients'); 
+        $queryResult = $this->database->query('SELECT * FROM patients ORDER BY lastname'); 
         $allPatientsData = $queryResult->fetchAll(PDO::FETCH_OBJ);
         return $allPatientsData;
     }

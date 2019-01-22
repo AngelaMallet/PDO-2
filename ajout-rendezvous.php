@@ -1,9 +1,6 @@
     <?php
 require_once 'controlers/controllerFormRdv.php';
 ?>
-<pre><?php
-    print_r($patientsList->id, $patientsList->lastname, $patientsList->firstname);
-?></pre>
     
 <!DOCTYPE html>
 <html lang="fr">
