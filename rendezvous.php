@@ -40,7 +40,7 @@ require_once 'controlers/controllerDetailsAppointments.php';
                                 <td><?= $rdvDetailObjArray->lastname ?></td>
                                 <td><?= $rdvDetailObjArray->firstname ?></td>
                                 <td><?= $rdvDetailObjArray->dateHour ?></td>
-                                <td><button><a href="modif-patient.php?id=<?= $IdPatientsArray->id ?>" class="waves-effect waves-light btn-small white-text blue-grey">Modifier</a></button></td>
+                                <td><button><a href="modif-rendezvous.php?id=<?= $rdvDetailObjArray->id ?>" class="waves-effect waves-light btn-small white-text blue-grey">Modifier</a></button></td>
                             </tr>   
                         </tbody>
                     </table>

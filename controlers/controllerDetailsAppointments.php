@@ -6,9 +6,10 @@ require 'models/modalAppointments.php';
 $rdvDetailObj = new appointments();
 
 if (isset($_GET['id'])) {
-    $rdvDetailObjArray->id = $_GET['id'];
+    $rdvDetailObj->id = $_GET['id'];                                                                                                                                                                                                                                 
     $rdvDetailObjArray = $rdvDetailObj->appointmentsDetail();
 }
+
 
 
 

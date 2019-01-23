@@ -42,7 +42,7 @@ require_once 'controlers/controllerListAllAppointments.php';
                         <tbody class="highlight blue-grey-text text-blue-grey darken-3">
                             <tr>
                                 <td><?= $rowRdv->dateHourAlias?></td>
-                                <td><button><a href="rendezvous.php?id=<?= $rowRdv->idPatients ?>" class="waves-effect waves-light btn-small white-text blue-grey">Détails</a></button></td>
+                                <td><button><a href="rendezvous.php?id=<?= $rowRdv->id ?>" class="waves-effect waves-light btn-small white-text blue-grey">Détails</a></button></td>
                         </tbody>
                              <?php
                     }

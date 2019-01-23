@@ -4,8 +4,7 @@ require_once 'models/modelDatabase.php';
 require_once 'models/modelPatients.php';
 $patientModif = new Patients();
 $profilPatient = $patientModif->Idpatients();
-    
-    
+
     
 // Déclaration des regeX
 $regexText = '/^[A-zÂ-ÿ -]+$/';
@@ -102,3 +101,5 @@ header("Location: http://localhost:8888/PDO-P2/$extra2?id=$profilPatient->id");
 exit;
 }
 //on vérifie que nous avons crée une entrée submit dans l'array $_POST, si présent on éxécute la méthode addPatient()
+
+
