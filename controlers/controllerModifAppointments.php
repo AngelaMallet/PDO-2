@@ -40,8 +40,11 @@ if (isset($_POST['dateHourModif'])) {
 // S'il n'y a pas d'erreurs et que je clique sur le bouton send alors 
 //j'envoi les nouvelles données dans ma table client
 if (count($formError) == 0 && isset($_POST['sendModif'])) {
+    $temp=$rdvDetailObj->dateHour;
+    $rdvDetailObj->dateHour=$rdvDetailObj->dateHourModif;
     $count = $rdvDetailObj->checkFree();
         if($count > 0){
+            $rdvDetailObj->dateHour=$temp;
             echo 'Le rendez-vous est déjà pris';
         } else {
     $rdvDetailObj->modifAppointment(); 
