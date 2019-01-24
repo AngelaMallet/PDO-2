@@ -1,3 +1,7 @@
+<?php
+require_once 'controlers/controllerListAllpatients.php';
+?>
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -27,7 +31,7 @@ and open the template in the editor.
             <ul>
                 <div data-tooltip="RENDEZ-VOUS"><li><a href="ajout-rendezvous.php" class="btn-floating  red accent-1"><i class="large material-icons">date_range</i></a></li></div>
                 <div data-tooltip="INSCRIPTION"><li><a href="ajout-patients.php" class="btn-floating  red accent-1"><i class="large material-icons">add_circle</i></a></li></div>
-                <div data-tooltip="PROFIL"><li><a href="liste-patients.php" class="btn-floating red accent-1"><i class="large material-icons">account_circle</i></a></li></div>
+                <div data-tooltip="PROFIL"><li><a href="profil-patient.php?id=<?= $patientsList->id ?>" class="btn-floating red accent-1"><i class="large material-icons">account_circle</i></a></li></div>
                 <div data-tooltip="ACCUEIL"><li><a href="index.php" class="btn-floating red accent-1"><i class="large material-icons">home</i></a></li></div>
             </ul>
         </div>

@@ -30,7 +30,8 @@ require_once 'controlers/controllerListAllPatients.php';
                      <a href="index.php" class="waves-effect waves-light red accent-1 btn-large">Retour</a>
                     <a href="profil-patient.php?id=<?= $_GET['id'] ?>" class="waves-effect waves-light red accent-1 btn-large">Votre espace</a>
                 </div>
-            </div>    
+            </div> 
+             <?php include 'home.html'; ?> 
         </div>
             
             

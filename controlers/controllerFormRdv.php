@@ -31,12 +31,11 @@ if (isset($_POST['dateHour'])) {
         if($count > 0){
             echo 'Le rendez-vous est déjà pris';
         } else {
-            echo 'Gagné';
+           
              $rdvObj->addAppointments(); 
-              /* Redirection vers une page différente du même dossier 
-            $extra = 'liste-rendez-vous.php';
+             $extra = 'liste-patients.php';
             header("Location: http://localhost:8888/PDO-P2/$extra");
-            exit;*/
+            exit;
         }
   
 }

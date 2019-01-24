@@ -45,7 +45,7 @@ require_once 'controlers/controllerDetailsAppointments.php';
                         </tbody>
                     </table>
                 </div>
-                 <?php include 'home.html'; ?> 
+                 <?php include 'home.php'; ?> 
             </div>
             
             <!-- fin du footer -->

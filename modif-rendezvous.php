@@ -56,7 +56,7 @@ require 'controlers/controllerModifAppointments.php';
                     </div>
                         
                 </div> 
-              <?php include 'home.html'; ?> 
+              <?php include 'home.php'; ?> 
             </div>
         </body> 
             <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

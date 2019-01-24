@@ -48,6 +48,27 @@ require_once 'controlers/controllerIdpatients.php';
                             </tr>   
                         </tbody>
                     </table>
+                    <table>
+                        <thead class="highlight blue-grey-text text-blue-grey darken-3">
+                          <tr>
+                                <th>Vos rendez-vous : </th>  
+                          </tr>      
+                        </thead>
+                        <tbody class="highlight blue-grey-text text-blue-grey darken-3">
+                    <?php
+                    // On affiche chaque entrée une à une
+                    foreach ($RDVpatientsArray as $rowRdv) { ?>
+                            
+                            
+                            <tr>
+                                <td><?= $rowRdv->dateHour?></td>
+                            </tr>
+                            
+                             <?php
+                    }
+                    ?>
+                        </tbody>
+                    </table>
                 </div>
                  <?php include 'home.html'; ?> 
             </div>

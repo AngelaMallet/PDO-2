@@ -96,3 +96,7 @@ class Patients extends database {
         parent::__destruct();
     }
 }
+
+
+
+

@@ -82,6 +82,25 @@ class appointments extends database {
             
         return $queryResult->execute(); //@return exécute la requ^e pour ajouter un patient
     }
+    
+    
+    public function showAppointment() { //modifappointment est une méthode avec la requête 
+    //qui va modifier le rendez-vous du patient dans la table modifappointments.
+    
+    //Modifications le rendez-vous du patient à l'aide de la requête préparée avec INSERT INTO et le nom des champs de la table
+    //Insertion des valeurs des variables via les marqueurs nominatifs exemple :nomdumarqueur en gros c'est comme un alias
+ // :marqueurs nominatifs 
+        $queryResult = $this->database->prepare('SELECT  DATE_FORMAT(appointments.dateHour, "%d/%m/%Y %H:%i") AS `dateHour` FROM appointments  WHERE idPatients = :idPatients');
+
+        $queryResult->bindValue(':idPatients', $this->idPatients, PDO::PARAM_INT);
+        $queryResult->execute(); //@return exécute la requ^e pour ajouter un patient
+        
+        return $queryResult->fetchAll(PDO::FETCH_OBJ);
+    }
+    
+    
+    
+    
 
 }
 
