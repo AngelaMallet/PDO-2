@@ -90,7 +90,7 @@ class appointments extends database {
     //Modifications le rendez-vous du patient à l'aide de la requête préparée avec INSERT INTO et le nom des champs de la table
     //Insertion des valeurs des variables via les marqueurs nominatifs exemple :nomdumarqueur en gros c'est comme un alias
  // :marqueurs nominatifs 
-        $queryResult = $this->database->prepare('SELECT  DATE_FORMAT(appointments.dateHour, "%d/%m/%Y %H:%i") AS `dateHour` FROM appointments  WHERE idPatients = :idPatients');
+        $queryResult = $this->database->prepare('SELECT  DATE_FORMAT(appointments.dateHour, "%d/%m/%Y %H:%i") AS `dateHour` FROM appointments  WHERE idPatients = :idPatients ORDER BY dateHour');
 
         $queryResult->bindValue(':idPatients', $this->idPatients, PDO::PARAM_INT);
         $queryResult->execute(); //@return exécute la requ^e pour ajouter un patient
@@ -99,8 +99,16 @@ class appointments extends database {
     }
     
     
-    
-    
-
+      public function deleteAppointments() {
+        //je fais ma requête dans une variable $query
+        $queryResult = $this->database->prepare('DELETE
+                  FROM appointments
+                  WHERE id =:id;');
+        
+       $queryResult->bindValue(':id', $this->id, PDO::PARAM_INT);
+       return $queryResult->execute(); //@return exécute la requ^e pour ajouter un patient
+       
+    }
+ 
 }
 

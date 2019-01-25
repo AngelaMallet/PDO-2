@@ -33,6 +33,7 @@ require_once 'controlers/controllerListAllAppointments.php';
                             <tr>
                                 <th>DATE ET HEURE DU RDV</th>
                                 <th></th>
+                                <th></th>
                             </tr>
                         </thead>                  
                     <?php
@@ -42,7 +43,8 @@ require_once 'controlers/controllerListAllAppointments.php';
                         <tbody class="highlight blue-grey-text text-blue-grey darken-3">
                             <tr>
                                 <td><?= $rowRdv->dateHourAlias?></td>
-                                <td><button><a href="rendezvous.php?id=<?= $rowRdv->id ?>" class="waves-effect waves-light btn-small white-text blue-grey">Détails</a></button></td>
+                                <td id="rowDetail"><button><a class="waves-effect waves-light blue-grey darken-1 btn modal-trigger" href="#modal1<?= $rowRdv->id ?>">Supprimer</a></button></td>
+                                
                         </tbody>
                              <?php
                     }
@@ -51,8 +53,20 @@ require_once 'controlers/controllerListAllAppointments.php';
                 </div> 
             </div>
         </div>
-        
-    
+        <?php
+        foreach ($rdvObjArray as $rowRdv) { ?>
+        <div id="modal1<?= $rowRdv->id ?>" class="modal">
+            
+    <div class="modal-content center-align">
+      <h6>Je confirme la suppression de mon rendez-vous.</h6>
+    </div>
+    <div class="modal-footer">
+      <a href="liste-rendez-vous.php?id=<?= $rowRdv->id ?>" id="red" class="btn-floating btn-large waves-effect waves-light red "><i class="material-icons">delete</i></a>
+    </div>
+  </div>
+    <?php
+                    }
+                    ?>
         
         <?php include 'home.html'; ?> 
         <!-- fin du footer -->
@@ -61,3 +75,4 @@ require_once 'controlers/controllerListAllAppointments.php';
 </html>
 
 
+    

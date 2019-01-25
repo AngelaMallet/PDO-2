@@ -128,4 +128,29 @@ button {
   font-size: 1.4em;
 }
 
+table .material-icons {
+  margin-left: 0px;
+}
 
+#red :hover {
+  background-color: #e5665b;
+}
+
+#red {
+  background-color: #607D8A!important;
+}
+#rowDetail {
+    max-width: 200px;
+}
+
+/* style.css */
+
+.btn-floating.btn-large i {
+  margin-left: -1px;
+  line-height: 58px;
+}
+/* inline_style_edits.inline.css */
+
+.modal-footer #red {
+  margin: -18px 0px 0px;
+}

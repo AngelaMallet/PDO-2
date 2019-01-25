@@ -33,12 +33,12 @@ require_once 'controlers/controllerAjoutPatient.php';
             </div>    
             <div class="row">
                 <div class="col s12 m12 l3"><a href="ajout-patient.php" class="waves-effect waves-light btn-large white-text blue-grey lighten-3">Inscription</a></div>
-                <div class="col s12 m12 l3"><a href="profil-patient.php" waves-effect waves-light btn-large white-text blue-grey lighten-3>Profil</a></div>
+                <div class="col s12 m12 l3"><a href="profil-patient.php" class="waves-effect waves-light btn-large white-text blue-grey lighten-3">Profil</a></div>
                 <div class="col s12 m12 l3"><a href="ajout-rendezvous.php"class="waves-effect waves-light btn-large white-text blue-grey lighten-3">RDV</a></div>
                 <div class="col s12 m12 l3"><a href="liste-patients.php" class="waves-effect waves-light btn-large white-text blue-grey lighten-3">Patients</a></div>
             </div>
         </div>
-        
+
         <!-- fin du footer -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
         <script type="text/javascript" src="materialize.min.js"></script>
