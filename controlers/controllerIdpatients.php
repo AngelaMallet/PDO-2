@@ -11,7 +11,7 @@ $RDVpatientsObj = new appointments();
 if (isset($_GET['id'])) {
     $RDVpatientsObj->idPatients = $IdpatientsArrayObj->id = $_GET['id'];
     $IdPatientsArray = $IdpatientsArrayObj->Idpatients();
-    $IdpatientsArrayObj->birthdate = date('Y-m-d', strtotime($date));
+    $IdpatientsArrayObj->birthdate;
     $RDVpatientsArray = $RDVpatientsObj->showAppointment();
 }
 
@@ -20,3 +20,4 @@ if (isset($_GET['id'])) {
 
 
 
+// $IdpatientsArrayObj->birthdate = date('Y-m-d', strtotime($date));

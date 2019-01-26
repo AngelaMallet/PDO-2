@@ -31,6 +31,8 @@ require_once 'controlers/controllerListAllpatients.php';
                             <tr>
                                 <th>NOM</th>
                                 <th>PRÉNOM</th>
+                                <th class="center-align">DÉTAILS</th>
+                                <th class="center-align">SUPPRIMER LE PATIENT</th>
                                 <th></th>
                             </tr>
                         </thead>                  
@@ -43,6 +45,7 @@ require_once 'controlers/controllerListAllpatients.php';
                                 <td><?= $patientsList->lastname ?></td>
                                 <td><?= $patientsList->firstname ?></td>
                                 <td><button><a href="profil-patient.php?id=<?= $patientsList->id ?>" class="waves-effect waves-light btn-small white-text blue-grey">Détails</a></button></td>
+                                <td id="rowPatient"><button><a class="waves-effect waves-light blue-grey darken-1 btn modal-trigger" href="#modal1<?= $patientsList->id ?>">Supprimer</a></button></td>
                             </tr>   
                         </tbody>
                              <?php
@@ -50,11 +53,27 @@ require_once 'controlers/controllerListAllpatients.php';
                     ?>
                     </table>
                 </div>
-                 <div class="hide-on-small-only">
-                    <div class="col s12 m6 l6 center-align">
-                        <img class="clientsImg" width="650" height="700" src="thai.png" alt="Illustration médical">
+                <div class="hide-on-small-only">
+                    <div class="col s12 m6 l6 right-align">
+                        <img class="clientsImg" width="450" height="500" src="thai.png" alt="Illustration médical">
                     </div>
                 </div>
+                   </div>
+        <?php
+        foreach ($listPatientsArray as $patientsList) { ?>
+        <div id="modal1<?= $patientsList->id ?>" class="modal">
+            
+    <div class="modal-content center-align">
+      <h6>Je confirme la suppression du patient.</h6>
+    </div>
+    <div class="modal-footer">
+      <a href="liste-patients.php?id=<?= $patientsList->id ?>" id="red" class="btn-floating btn-large waves-effect waves-light red "><i class="material-icons">delete</i></a>
+    </div>
+  </div>
+    <?php
+                    }
+                    ?>
+                 
             </div>
         </div>
         <?php include 'home.html'; ?> 

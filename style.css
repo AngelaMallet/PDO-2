@@ -140,9 +140,11 @@ table .material-icons {
   background-color: #607D8A!important;
 }
 #rowDetail {
-    max-width: 200px;
+    max-width: 300px;
 }
-
+#rowPatient {
+    max-width: 300px;
+}
 /* style.css */
 
 .btn-floating.btn-large i {

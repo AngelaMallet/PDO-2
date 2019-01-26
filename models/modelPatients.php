@@ -92,6 +92,18 @@ class Patients extends database {
         return $queryResult->execute(); //@return exécute la requ^e pour ajouter un pacient
     }
     
+    
+       public function DeletePatient() {
+        //je fais ma requête dans une variable $query
+        $queryResult = $this->database->prepare('DELETE
+                  FROM patients
+                  WHERE id =:id;');
+        
+       $queryResult->bindValue(':id', $this->id, PDO::PARAM_INT);
+       return $queryResult->execute(); //@return exécute la requ^e pour ajouter un patient
+       
+    }
+    
       public function __destruct() {
         parent::__destruct();
     }
