@@ -89,12 +89,6 @@ button {
     opacity: 1;
 }
 
-.clientsImg {
-    margin-top: 130px;
-    border-radius: 20%;
-    blend-mode: multiply;
-}
-
 .oval {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -139,6 +133,7 @@ table .material-icons {
 #red {
   background-color: #607D8A!important;
 }
+
 #rowDetail {
     max-width: 300px;
 }

@@ -1,8 +1,8 @@
 <?php
 require_once 'controlers/controllerListAllAppointments.php';
 ?>
-
-
+    
+    
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -11,7 +11,7 @@ require_once 'controlers/controllerListAllAppointments.php';
         <!-- Favicons-->
         <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-        
+            
         <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="style.css" />
@@ -44,7 +44,7 @@ require_once 'controlers/controllerListAllAppointments.php';
                             <tr>
                                 <td><?= $rowRdv->dateHourAlias?></td>
                                 <td id="rowDetail"><button><a class="waves-effect waves-light blue-grey darken-1 btn modal-trigger" href="#modal1<?= $rowRdv->id ?>">Supprimer</a></button></td>
-                                
+                                    
                         </tbody>
                              <?php
                     }
@@ -57,22 +57,21 @@ require_once 'controlers/controllerListAllAppointments.php';
         foreach ($rdvObjArray as $rowRdv) { ?>
         <div id="modal1<?= $rowRdv->id ?>" class="modal">
             
-    <div class="modal-content center-align">
-      <h6>Je confirme la suppression de mon rendez-vous.</h6>
-    </div>
-    <div class="modal-footer">
-      <a href="liste-rendez-vous.php?id=<?= $rowRdv->id ?>" id="red" class="btn-floating btn-large waves-effect waves-light red "><i class="material-icons">delete</i></a>
-    </div>
-  </div>
+            <div class="modal-content center-align">
+                <h6>Je confirme la suppression de mon rendez-vous.</h6>
+            </div>
+            <div class="modal-footer">
+                <a href="liste-rendez-vous.php?id=<?= $rowRdv->id ?>" id="red" class="btn-floating btn-large waves-effect waves-light red "><i class="material-icons">delete</i></a>
+            </div>
+        </div>
     <?php
                     }
                     ?>
-        
+                        
         <?php include 'home.html'; ?> 
         <!-- fin du footer -->
-        
+            
     </body>
 </html>
-
-
+    
     

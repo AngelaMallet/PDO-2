@@ -11,7 +11,10 @@ class Patients extends database {
     public $birthdate;
     public $phone;
     public $mail;
-    
+    public $search;
+        
+
+
     // Méthode magique __construct() L’évènement qui appelle la méthode__constructest est la création de l'objet.
     public function __construct() {
         parent::__construct();
@@ -102,6 +105,15 @@ class Patients extends database {
        $queryResult->bindValue(':id', $this->id, PDO::PARAM_INT);
        return $queryResult->execute(); //@return exécute la requ^e pour ajouter un patient
        
+    }
+    
+    public function find() {
+        //je fais ma requête dans une variable $query
+        $queryResult = $this->database->prepare('SELECT * FROM patients WHERE `lastname` LIKE :search OR `firstname` LIKE :search ORDER BY `lastname`');
+        $queryResult->bindValue(':search', '%' . $this->search . '%' , PDO::PARAM_STR);
+        $queryResult->execute();
+        return $queryResult->fetchAll(PDO::FETCH_OBJ);
+        
     }
     
       public function __destruct() {

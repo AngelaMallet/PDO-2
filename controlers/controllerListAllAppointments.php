@@ -13,3 +13,4 @@ if (isset($_GET['id'])) {
             header("Location: http://localhost:8888/PDO-P2/$extra");
             exit;
 }
+

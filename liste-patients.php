@@ -21,17 +21,29 @@ require_once 'controlers/controllerListAllpatients.php';
  <?php include 'nav.html';?>
         <!--Fin du header et navbar -->
         <div class="container">
+            
             <div class="row">
-                <div class="col s12 m12 l12 center-align blue-grey-text text-blue-grey darken-3">
-                    <h1>Liste des patients :</h1>
+                <h1>Liste des patients :</h1>
+                
+                    <div class="row">
+                <div class="col l3 offset-l10 right-align">
+                    <form action = "liste-patients.php" method = "POST">
+                        <input type = "search" name = "terme">
+                        <input class=" btn-small white-text blue-grey" type="submit" name = "s" value = "Rechercher">
+                    </form>
+                   
                 </div>
+            </div>
                 <div class="col s12 m6 l6">
                     <table>
                         <thead class="highlight blue-grey-text text-blue-grey darken-3">
                             <tr>
                                 <th>NOM</th>
+                                <th></th>
                                 <th>PRÉNOM</th>
+                                 <th></th>
                                 <th class="center-align">DÉTAILS</th>
+                                <th></th>
                                 <th class="center-align">SUPPRIMER LE PATIENT</th>
                                 <th></th>
                             </tr>
@@ -43,9 +55,12 @@ require_once 'controlers/controllerListAllpatients.php';
                         <tbody class="highlight blue-grey-text text-blue-grey darken-3">
                             <tr>
                                 <td><?= $patientsList->lastname ?></td>
+                                <td></td>
                                 <td><?= $patientsList->firstname ?></td>
+                                <td></td>
                                 <td><button><a href="profil-patient.php?id=<?= $patientsList->id ?>" class="waves-effect waves-light btn-small white-text blue-grey">Détails</a></button></td>
-                                <td id="rowPatient"><button><a class="waves-effect waves-light blue-grey darken-1 btn modal-trigger" href="#modal1<?= $patientsList->id ?>">Supprimer</a></button></td>
+                                <td></td>
+                                <td><button><a class="waves-effect waves-light blue-grey darken-1 btn modal-trigger"  href="#modal1<?= $patientsList->id ?>">Supprimer</a></button></td>
                             </tr>   
                         </tbody>
                              <?php
@@ -53,32 +68,28 @@ require_once 'controlers/controllerListAllpatients.php';
                     ?>
                     </table>
                 </div>
-                <div class="hide-on-small-only">
-                    <div class="col s12 m6 l6 right-align">
-                        <img class="clientsImg" width="450" height="500" src="thai.png" alt="Illustration médical">
-                    </div>
-                </div>
-                   </div>
+
+            </div>
         <?php
         foreach ($listPatientsArray as $patientsList) { ?>
-        <div id="modal1<?= $patientsList->id ?>" class="modal">
-            
-    <div class="modal-content center-align">
-      <h6>Je confirme la suppression du patient.</h6>
-    </div>
-    <div class="modal-footer">
-      <a href="liste-patients.php?id=<?= $patientsList->id ?>" id="red" class="btn-floating btn-large waves-effect waves-light red "><i class="material-icons">delete</i></a>
-    </div>
-  </div>
+            <div id="modal1<?= $patientsList->id ?>" class="modal">
+                
+                <div class="modal-content center-align">
+                    <h6>Je confirme la suppression du patient.</h6>
+                </div>
+                <div class="modal-footer">
+                    <a href="liste-patients.php?id=<?= $patientsList->id ?>" id="red" class="btn-floating btn-large waves-effect waves-light red "><i class="material-icons">delete</i></a>
+                </div>
+            </div>
     <?php
                     }
                     ?>
-                 
-            </div>
+            
         </div>
+    
         <?php include 'home.html'; ?> 
-        <!-- fin du footer -->
-        
-    </body>
+    <!-- fin du footer -->
+    
+</body>
 </html>
 
